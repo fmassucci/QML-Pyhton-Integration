@@ -7,7 +7,6 @@ from PySide6.QtQml import QQmlApplicationEngine, QmlElement
 from PySide6.QtQuickControls2 import QQuickStyle
 from integration2 import Bridge2
 
-
 # To be used on the @QmlElement decorator
 # (QML_IMPORT_MINOR_VERSION is optional)
 QML_IMPORT_NAME = "io.backend.integration1"
@@ -30,7 +29,7 @@ if __name__ == '__main__':
 
     # Get the path of the current directory, and then add the name
     # of the QML file, to load it.
-    qml_file = Path(__file__).parent / 'main.qml'
+    qml_file = Path(__file__).parent.parent / 'qml/main.qml'
     engine.load(qml_file)
 
     if not engine.rootObjects():
