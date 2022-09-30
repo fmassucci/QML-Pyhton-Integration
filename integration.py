@@ -10,7 +10,7 @@ from integration2 import Bridge2
 
 # To be used on the @QmlElement decorator
 # (QML_IMPORT_MINOR_VERSION is optional)
-QML_IMPORT_NAME = "g1.backend.integration1"
+QML_IMPORT_NAME = "io.backend.integration1"
 QML_IMPORT_MAJOR_VERSION = 1
 
 
@@ -19,7 +19,7 @@ class Bridge(QObject):
 
     @Slot(str, result=str)
     def test(self, s):
-        return s+" Texto do Arquivo integration.py"
+        return s+" Text from integration.py"
 
 
 
@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     # Get the path of the current directory, and then add the name
     # of the QML file, to load it.
-    qml_file = Path(__file__).parent / 'view.qml'
+    qml_file = Path(__file__).parent / 'main.qml'
     engine.load(qml_file)
 
     if not engine.rootObjects():

@@ -4,8 +4,8 @@ import QtQuick.Controls 2.1
 import QtQuick.Window 2.1
 import QtQuick.Controls.Material 2.1
 
-import g1.backend.integration1 1.0
-import g1.backend.integration2 1.0
+import io.backend.integration1 1.0
+import io.backend.integration2 1.0
 
 ApplicationWindow {
     id: page
@@ -35,16 +35,16 @@ ApplicationWindow {
         id: botao
         anchors.top: leftlabel.bottom
         anchors.horizontalCenter: parent.horizontalCenter
-        text: "Aperte"
+        text: "Press this button"
 
         property bool changer: true
 
         onClicked: {
             if (changer == true) {
-                leftlabel.text = bridge.test("Texto do QML + ")
+                leftlabel.text = bridge.test("Text from QML + ")
                 changer = !changer
             } else {
-                leftlabel.text = bridge2.test("Texto do QML + ")
+                leftlabel.text = bridge2.test("Text from QML + ")
                 changer = !changer
             }
             

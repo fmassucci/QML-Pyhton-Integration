@@ -9,7 +9,7 @@ from PySide6.QtQuickControls2 import QQuickStyle
 
 # To be used on the @QmlElement decorator
 # (QML_IMPORT_MINOR_VERSION is optional)
-QML_IMPORT_NAME = "g1.backend.integration2"
+QML_IMPORT_NAME = "io.backend.integration2"
 QML_IMPORT_MAJOR_VERSION = 1
 
 
@@ -17,5 +17,5 @@ QML_IMPORT_MAJOR_VERSION = 1
 class Bridge2(QObject):
 
     @Slot(str, result=str)
-    def test(self, s):
-        return s+" Texto do Arquivo Integration2.py"
+    def test(self, text):
+        return text+" Text from integration2.py"
