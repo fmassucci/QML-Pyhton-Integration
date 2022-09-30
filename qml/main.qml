@@ -4,8 +4,8 @@ import QtQuick.Controls 2.1
 import QtQuick.Window 2.1
 import QtQuick.Controls.Material 2.1
 
-import io.backend.integration1 1.0
-import io.backend.integration2 1.0
+import io.backend.main 1.0
+import io.backend.externalFile 1.0
 
 ApplicationWindow {
     id: page

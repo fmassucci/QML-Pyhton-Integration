@@ -5,11 +5,11 @@ from PySide6.QtCore import QObject, Slot
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine, QmlElement
 from PySide6.QtQuickControls2 import QQuickStyle
-from integration2 import Bridge2
+from externalFile import Bridge2
 
 # To be used on the @QmlElement decorator
 # (QML_IMPORT_MINOR_VERSION is optional)
-QML_IMPORT_NAME = "io.backend.integration1"
+QML_IMPORT_NAME = "io.backend.main"
 QML_IMPORT_MAJOR_VERSION = 1
 
 
@@ -18,7 +18,7 @@ class Bridge(QObject):
 
     @Slot(str, result=str)
     def test(self, s):
-        return s+" Text from integration.py"
+        return s+" Text from main.py"
 
 
 
